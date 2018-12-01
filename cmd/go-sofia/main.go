@@ -11,8 +11,8 @@ import (
 	"time"
 
 	"github.com/gorilla/mux"
-	"github.com/rumyantseva/go-sofia/internal/diagnostics"
-	"github.com/rumyantseva/go-sofia/internal/version"
+	"github.com/flamerior/go-sofia/internal/diagnostics"
+	"github.com/flamerior/go-sofia/internal/version"
 	meta "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/client-go/kubernetes"
 	"k8s.io/client-go/rest"
@@ -115,7 +115,7 @@ func hello(w http.ResponseWriter, r *http.Request) {
 		fmt.Fprintf(w, "Couldn't create a k8s client: %v", err)
 	}
 
-	podlist, err := c.Core().Pods("rumyantseva").List(meta.ListOptions{})
+	podlist, err := c.Core().Pods("flamerior").List(meta.ListOptions{})
 	if err != nil {
 		w.Header().Set("Content-Type", "application/json; charset=utf-8")
 		w.WriteHeader(http.StatusInternalServerError)
