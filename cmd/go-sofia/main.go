@@ -129,5 +129,5 @@ func hello(w http.ResponseWriter, r *http.Request) {
 
 	w.Header().Set("Content-Type", "application/json; charset=utf-8")
 	w.WriteHeader(http.StatusOK)
-	fmt.Fprintf(w, "The list of pods: [%v].", podnames)
+	fmt.Fprintf(w, "hello test The list of pods: [%v].", podnames)
 }
