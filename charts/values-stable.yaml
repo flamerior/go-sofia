@@ -77,7 +77,7 @@ ingress:
 service:
   ## App container name
   ##
-  name: go-sofia
+  name: go-sofiaq
   
   ## Service Type
   ## For minikube, set this to NodePort, elsewhere use ClusterIP
